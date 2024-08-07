@@ -1,14 +1,14 @@
-public class Car extends EarthTransport{
-    int countWheels;
-    public Car(String kind, int speed, int weight, String motor, int countWheels){
-        super(kind, speed, weight, motor);
-        this.countWheels = countWheels;
+
+class Car extends LandTransport {
+    int doors;
+
+    Car(String make, String model, int maxSpeed, int doors) {
+        super(make, model, maxSpeed, 4);
+        this.doors = doors;
     }
-    public void display(){
-        System.out.println("вид транспорта " + kind +
-                " скорость: +" + speed +
-                " вес : "+ weight
-                + " вид мотора " + motor
-                + " количество колес "+ countWheels );
+
+    @Override
+    String move() {
+        return "Едет на бензине";
     }
 }

@@ -1,11 +1,13 @@
-public class Transport {
-    String kind;
-    int speed;
-    int weight;
+abstract class Transport {
+    String make;
+    String model;
+    int maxSpeed;
 
-    public Transport(String kind, int speed, int weight){
-        this.kind = kind;
-        this.speed = speed;
-        this.weight = weight;
+    Transport(String make, String model, int maxSpeed) {
+        this.make = make;
+        this.model = model;
+        this.maxSpeed = maxSpeed;
     }
+
+    abstract String move();
 }
